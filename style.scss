@@ -15,7 +15,7 @@ body {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 0px;
   max-width: 800px;
   padding-left: 10px;
   padding-right: 10px;
@@ -49,15 +49,18 @@ body {
 }
 
 .nav-top {
+  background: $light_gray;
   display: flex;
   font-family: "Glacial-Bold";
   flex-wrap: wrap;
   justify-content: space-around;
   letter-spacing: 1px;
   list-style: none;
+  margin-top: 0px;
   padding: 0px;
+  padding-top: 25px;
   position: sticky;
-  top: 25px;
+  top: 0px;
 
   li {
     flex-grow: 1;
