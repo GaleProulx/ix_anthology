@@ -4,24 +4,31 @@
 //
 
 // Colors
-$blue: #4183C4;
-
-// Grays
 $black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+$blue: #56ccfd;
+$border_gray: #666666;
+$cracker: #FFFFFF;
+$dark_gray: #1d1d1d;
+$gray: #232323;
+$green: #2c9b3f;
+$light_gray: #313131;
+$purple: #8a38d7;
+$red: #de3a29;
+$white: #b1b1b1;
+$yellow: #e5b82e;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+@font-face {
+  font-family: "Glacial";
+  src: url("fonts/GlacialIndifference-Regular.otf");
+}
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
+@font-face {
+  font-family: "Arvo";
+  src: url("fonts/Arvo-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Glacial-Bold";
+  src: url("fonts/GlacialIndifference-Bold.otf");
 }
