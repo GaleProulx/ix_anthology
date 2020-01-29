@@ -107,7 +107,7 @@ body {
     #home:hover {
       color: $cracker;
       background: $red;
-      text-shadow: 1px 1px $dark_gray;
+      text-shadow: 0px 0px 4px $black;
       transition: 0.4s;
     }
 
@@ -121,28 +121,40 @@ body {
     #logo:hover {
       color: $cracker;
       background: $blue;
-      text-shadow: 1px 1px $dark_gray;
+      text-shadow: 0px 0px 4px $black;
       transition: 0.4;
     }
 
     #the-data:hover {
       color: $cracker;
       background: $green;
-      text-shadow: 1px 1px $dark_gray;
+      text-shadow: 0px 0px 4px $black;
       transition: 0.4s;
     }
 
     #about:hover {
       color: $cracker;
       background: $purple;
-      text-shadow: 1px 1px $dark_gray;
+      text-shadow: 0px 0px 4px $black;
       transition: 0.4s;
+    }
+  }
+
+  @media (max-width: 515px) {
+    li {
+      width: 100%;
     }
   }
 
   #logo {
     height: 40px;
     max-height: 40px;
+  }
+}
+
+@media (max-width: 515px) {
+  .nav-top {
+    position: static;
   }
 }
 
