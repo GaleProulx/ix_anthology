@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SUBMISSION OPTIONS
-permalink: /submission-options/
+permalink: /submission-guidelines
 ---
 
 ## Standard Submission Guidelines

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Data
-permalink: /the-data/
+permalink: /the-data
 ---
 
 Required under the Clery Act, every postsecondary institution receiving federal aid must submit the number of reported crimes for specific incidents. The data is then processed by the federal government and posted publicly on the Campus Safety and Security website. This project took all the data from the Campus Safety and Security website regarding postsecondary institution's crime rates from 2009 to 2017 and combined all the data into one succinct file. Information regarding the processing and cleaning of the data can be found here.

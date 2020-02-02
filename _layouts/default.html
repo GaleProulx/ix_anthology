@@ -20,10 +20,18 @@
     <div class="body-container">
       <ul class="nav-top">
         <li><a href="/home" id="home">HOME</a></li>
-        <li><a href="/submission-options" id="submission-options">SUBMISSIONS</a></li>
+        <li><a href="/submission-guidelines" id="submission-guidelines">SUBMISSIONS</a></li>
         <li><a href="/" id="logo">IX ANTHOLOGY</a></li>
         <li><a href="/the-data" id="the-data">THE DATA</a></li>
         <li><a href="/about" id="about">ABOUT</a></li>
+      </ul>
+      <ul class="nav-sub">
+        <li><a href="home" id="sub-our-project">Our Project</a></li>
+        <li><a href="the-mission" id="sub-the-mission">The Mission</a></li>
+        <li><a href="submission-guidelines" id="sub-submission-guidelines">Submission Guidelines</a></li>
+        <li><a href="submission-options" id="sub-submission-options">Submission Options</a></li>
+        <li><a href="about" id="sub-about">About Us</a></li>
+        <li><a href="title-ix-information" id="sub-title-ix-information">Title IX</a></li>
       </ul>
       <div class="content-container">
         {{ content }}
@@ -31,5 +39,102 @@
     </div>
 
     {% include analytics.html %}
+    <script type="text/javascript">
+      /**************************************************************/
+      /*** VARIABLES ************************************************/
+      /**************************************************************/
+      var url = window.location.pathname.split('/').pop();
+      sub_url = "sub-" + url;
+      var at_yellow = "background-color: #e5b82e;";
+      var at_text_shadow = "text-shadow: 0px 0px 4px #000000;";
+      var at_color = "color: #FFFFFF;";
+      var at_red = "background-color: #de3a29;";
+      var at_purple = "background-color: #8a38d7;";
+      var at_green = "background-color: #2c9b3f;";
+      var at_height = "max-height: 40px;";
+
+      /**************************************************************/
+      /*** FUNCTIONS ************************************************/
+      /**************************************************************/
+      function generateSubnav(items) {
+        var sub_pages = ["sub-our-project", "sub-the-mission",
+                         "sub-submission-guidelines", "sub-submission-options",
+                         "sub-about", "sub-title-ix-information"];
+
+        for (c = 0; c < sub_pages.length; c++) {
+          if (items.includes(sub_pages[c]) == false) {
+            var elem = document.getElementById(sub_pages[c]);
+            elem.parentNode.parentNode.removeChild(elem.parentNode);
+          }
+        }
+      }
+
+      function setAttributes(element, attributes) {
+        document.getElementById(element).setAttribute("style", attributes);
+      }
+
+      /**************************************************************/
+      /*** SUB NAVIGATION CODE***************************************/
+      /**************************************************************/
+      switch(url) {
+        /*******************************/
+        /***** HOME SUB NAVIGATION *****/
+        /*******************************/
+        case "home":
+          var styling = at_red + at_text_shadow + at_color;
+          setAttributes("home", styling);
+          setAttributes("sub-our-project", styling + at_height);
+          generateSubnav(["sub-our-project", "sub-the-mission"]);
+          break;
+        case "the-mission":
+          var styling = at_red + at_text_shadow + at_color;
+          setAttributes("home", styling);
+          setAttributes("sub-the-mission", styling + at_height);
+          generateSubnav(["sub-our-project", "sub-the-mission"]);
+          break;
+        /**********************************/
+        /***** SUBMISSIONS NAVIGATION *****/
+        /**********************************/
+        case "submission-guidelines":
+          var styling = at_yellow + at_text_shadow + at_color;
+          setAttributes(url, styling);
+          setAttributes(sub_url, styling + at_height);
+          generateSubnav(["sub-submission-guidelines",
+            "sub-submission-options"]);
+          break;
+        case "submission-options":
+          var styling = at_yellow + at_text_shadow + at_color;
+          setAttributes("submission-guidelines", styling);
+          setAttributes(sub_url, styling + at_height);
+          generateSubnav(["sub-submission-guidelines",
+            "sub-submission-options"]);
+          break;
+        /*******************************/
+        /***** THE DATA NAVIGATION *****/
+        /*******************************/
+        case "the-data":
+          var styling = at_green + at_text_shadow + at_color;
+          setAttributes("the-data", styling);
+          // setAttributes("sub-about", styling + at_height);
+          generateSubnav([]);
+          break;
+        /****************************/
+        /***** ABOUT NAVIGATION *****/
+        /****************************/
+        case "about":
+          var styling = at_purple + at_text_shadow + at_color;
+          setAttributes("about", styling);
+          setAttributes("sub-about", styling + at_height);
+          generateSubnav(["sub-about", "sub-title-ix-information"]);
+          break;
+        case "title-ix-information":
+          var styling = at_purple + at_text_shadow + at_color;
+          setAttributes("about", styling);
+          setAttributes("sub-title-ix-information", styling + "; max-height: 40px");
+          generateSubnav(["sub-about", "sub-title-ix-information"]);
+          break;
+
+      }
+    </script>
   </body>
 </html>

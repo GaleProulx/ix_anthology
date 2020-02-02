@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Our Project
-permalink: /home/
+permalink: /home
 ---
 
 ## No Student’s Education Should be Jeopardized for Seeking Justice.

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About the Staff
-permalink: /about/
+permalink: /about
 ---
 
 ## Rose Marshall (she/her)
