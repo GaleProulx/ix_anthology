@@ -1,12 +1,10 @@
 ---
 layout: page
-title: SUBMISSION OPTIONS
+title: Standard Submission Guidelines
 permalink: /submission-guidelines
 ---
 
-## Standard Submission Guidelines
-
-### Standard Submissions Close March 15th at Midnight
+## Submissions Close March 15th at Midnight
 
 *IX Anthology* is a creative nonfiction collection whose focus is on the Title IX process on college campuses. Whether you were directly involved in a Title IX case or simply saw the impact it had on a close friend or family member, we want to hear your stories (with consent from the person involved, of course)!
 
@@ -18,7 +16,7 @@ As a creative nonfiction anthology, we accept: essays, short memoirs, nonfiction
 
 Our focus is on **Champlain College** specifically, but we're open to outside submissions as well.
 
-If you're interested in submitting, but aren't a confident writer, check out our Interview/Ghostwriting option. This is an important topic and we don't believe writing skill should hinder anyone's ability to share their story.
+If you're interested in submitting, but aren't a confident writer, check out our [Interview/Ghostwriting option]({{ site.baseurl }}/submission-options). This is an important topic and we don't believe writing skill should hinder anyone's ability to share their story.
 
 Simultaneous submissions are allowed, but it’s your responsibility to let us know if your piece is accepted elsewhere.
 
@@ -36,7 +34,7 @@ Due to legal reasons, we will not be including any names in the anthology. When 
   - Any line spacing allowed, as long as it's readable.
   - You may submit as many poems/short forms as you like, as long as their **total word count** doesn’t exceed 1,000 or your **total page count** does not exceed 4 pages. Submit all poems in the same document.
   - Due to our focus, **by law** submissions may not include **any** personal information concerning **any** party member. This includes names, dorm specifications, or any other information that could be used to discern identity.
-- To submit, email us at [theixanthology@gmail.com]({{ site.baseurl }}{ theixanthology@gmail.com %}). As stated previously, you may include as little or as much personal information in this email as you’d like. **If submitting anonymously,** feel free to create a fake gmail account and just send us the file (but please keep said email active so we may contact you about your submission).
+- To submit, email us at [theixanthology@gmail.com](mailto: theixanthology@gmail.com). As stated previously, you may include as little or as much personal information in this email as you’d like. **If submitting anonymously,** feel free to create a fake gmail account and just send us the file (but please keep said email active so we may contact you about your submission).
 - When submitting, title your file simply with the title of the piece.
 
 By submitting your work, you agree to give *IX Anthology* First North American Serial Rights (FNASR) (if previously unpublished), archival rights, and the right to reproduce work for promotional purposes upon acceptance.

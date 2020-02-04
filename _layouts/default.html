@@ -27,14 +27,17 @@
       </ul>
       <ul class="nav-sub">
         <li><a href="home" id="sub-our-project">Our Project</a></li>
+        <li><a href="submission-guidelines" id="sub-submission-guidelines">Standard Submissions</a></li>
+        <li><a href="submission-options" id="sub-submission-options">Interviews / Ghostwriting</a></li>
         <li><a href="the-mission" id="sub-the-mission">The Mission</a></li>
-        <li><a href="submission-guidelines" id="sub-submission-guidelines">Submission Guidelines</a></li>
-        <li><a href="submission-options" id="sub-submission-options">Submission Options</a></li>
         <li><a href="about" id="sub-about">About Us</a></li>
         <li><a href="title-ix-information" id="sub-title-ix-information">Title IX</a></li>
       </ul>
       <div class="content-container">
         {{ content }}
+        <div class="footer">
+          {% include svg-icons.html %}
+        </div>
       </div>
     </div>
 
@@ -84,13 +87,7 @@
           var styling = at_red + at_text_shadow + at_color;
           setAttributes("home", styling);
           setAttributes("sub-our-project", styling + at_height);
-          generateSubnav(["sub-our-project", "sub-the-mission"]);
-          break;
-        case "the-mission":
-          var styling = at_red + at_text_shadow + at_color;
-          setAttributes("home", styling);
-          setAttributes("sub-the-mission", styling + at_height);
-          generateSubnav(["sub-our-project", "sub-the-mission"]);
+          generateSubnav([]);
           break;
         /**********************************/
         /***** SUBMISSIONS NAVIGATION *****/
@@ -121,17 +118,23 @@
         /****************************/
         /***** ABOUT NAVIGATION *****/
         /****************************/
+        case "the-mission":
+          var styling = at_purple + at_text_shadow + at_color;
+          setAttributes("about", styling);
+          setAttributes("sub-the-mission", styling + at_height);
+          generateSubnav(["sub-the-mission", "sub-about", "sub-title-ix-information"]);
+          break;
         case "about":
           var styling = at_purple + at_text_shadow + at_color;
           setAttributes("about", styling);
           setAttributes("sub-about", styling + at_height);
-          generateSubnav(["sub-about", "sub-title-ix-information"]);
+          generateSubnav(["sub-the-mission", "sub-about", "sub-title-ix-information"]);
           break;
         case "title-ix-information":
           var styling = at_purple + at_text_shadow + at_color;
           setAttributes("about", styling);
           setAttributes("sub-title-ix-information", styling + "; max-height: 40px");
-          generateSubnav(["sub-about", "sub-title-ix-information"]);
+          generateSubnav(["sub-the-mission", "sub-about", "sub-title-ix-information"]);
           break;
 
       }

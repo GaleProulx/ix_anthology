@@ -5,6 +5,7 @@
 ///////////////////////////////////////////////////////////////
 @import "variables";
 @import "navigation";
+@import "svg-icons";
 
 body {
   background-color: $light_gray;
@@ -113,5 +114,19 @@ body {
     color: $cracker;
     background-color: $blue;
     transition: 0.6s;
+  }
+}
+
+.footer {
+  background-color: $light_gray;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+
+  i {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
