@@ -15,3 +15,6 @@ The following visualizations were generated from the Clery Act starting from 200
 ## Rape Crimes on Campus
 
 ![Rape Crimes](/images/Rape_Crimes_Reported.png)
+
+
+{% include rape_stats.html %}
