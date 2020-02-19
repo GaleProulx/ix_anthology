@@ -1,0 +1,160 @@
+---
+layout: default
+permalink: /institution-console
+---
+
+<script type="text/javascript">
+  // Script from w3schools: https://www.w3schools.com/howto/howto_js_filter_table.asp
+  function searchTable() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("confidence-table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  // function updateTable() {
+  //   /* Clear all columns. */
+  //   shown_columns = document.getElementsByClassName("optional-stat");
+  //   for (c = 0; c < shown_columns.length; c++) {
+  //     console.log(shown_columns.length)
+  //     shown_columns[c].setAttribute("style", "display: none;");
+  //   }
+  //   var options = document.getElementById("stat");
+  //   var stat_id = options.options[options.selectedIndex].text.toUpperCase();
+  //   console.log(stat_id);
+  //   document.getElementById(stat_id).setAttribute("style", "display: table-cell;");
+  // }
+
+</script>
+
+<div class="search-console">
+  <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for Institution...">
+  <!-- <div class="select-bar">
+    <select id="stat" onchange="updateTable()">
+      <option value="" selected="selected">Pick a crime to see confidence score...</option>
+      <option value="AGG_A">Aggravated Assault</option>
+      <option value="ARSON">Arson</option>
+      <option value="BURGLA">Burglary</option>
+      <option value="BURGLA_RAC">Burglary by Bias Race</option>
+      <option value="DRUG">Drug</option>
+      <option value="FONDL">Fondling</option>
+      <option value="FORCIB">Forcible Sex Offense</option>
+      <option value="INTIM">Intimvalueation</option>
+      <option value="INTIM_ETH">Intimvalueation by Bias Ethnicity</option>
+      <option value="INTIM_GEN">Intimvalueation by Bias Gender</option>
+      <option value="INTIM_RAC">Intimvalueation by Bias Race</option>
+      <option value="INTIM_REL">Intimvalueation by Bias Religion</option>
+      <option value="INTIM_SEX">Intimvalueation by Bias Sexual Orientation</option>
+      <option value="LAR_T">Larceny</option>
+      <option value="LAR_T_RAC">Larceny by Bias Race</option>
+      <option value="LIQUOR">Liquor</option>
+      <option value="MURD">Murder</option>
+      <option value="NONFOR">Nonforcible Sex Offense</option>
+      <option value="RAPE">Rape</option>
+      <option value="ROBBE">Robbery</option>
+      <option value="SIM_A">Simple Assault</option>
+      <option value="SIM_A_RAC">Simple Assault by Race</option>
+      <option value="SIM_A_SEX">Simple Assault by Sexual Orientation</option>
+      <option value="STATR">Statutory Rape</option>
+      <option value="VANDAL">Vandalism</option>
+      <option value="VANDAL_RAC">Vandalism by Bias Race</option>
+      <option value="VANDAL_REL">Vandalism by Bias Religion</option>
+      <option value="VANDAL_SEX">Vandalism by Bias Sexual Orientation</option>
+      <option value="VANDAL_GEN">Vandalism by Bias Gender</option>
+      <option value="VANDAL_ETH">Vandalism by Bias Ethnicity</option>
+      <option value="VEHIC">Motor Vehicle Theft</option>
+      <option value="WEAPON">Weapon</option>
+    </select>
+  </div> -->
+
+  <table id="confidence-table">
+    <tr class="table-header">
+      <th>Instutition</th>
+      <!-- <th class="optional-stat" id="">Pick a crime to see confidence...</th>
+      <th class="optional-stat" id="AGG_A">Aggravated Assault</th>
+      <th class="optional-stat" id="ARSON">Arson</th>
+      <th class="optional-stat" id="BURGLA">Burglary</th>
+      <th class="optional-stat" id="BURGLA_RAC">Burglary by Bias Race</th>
+      <th class="optional-stat" id="DRUG">Drug</th>
+      <th class="optional-stat" id="FONDL">Fondling</th>
+      <th class="optional-stat" id="FORCIB">Forcible Sex Offense</th>
+      <th class="optional-stat" id="INTIM">Intimidation</th>
+      <th class="optional-stat" id="INTIM_ETH">Intimidation by Bias Ethnicity</th>
+      <th class="optional-stat" id="INTIM_GEN">Intimidation by Bias Gender</th>
+      <th class="optional-stat" id="INTIM_RAC">Intimidation by Bias Race</th>
+      <th class="optional-stat" id="INTIM_REL">Intimidation by Bias Religion</th>
+      <th class="optional-stat" id="INTIM_SEX">Intimidation by Bias Sexual Orientation</th>
+      <th class="optional-stat" id="LAR_T">Larceny</th>
+      <th class="optional-stat" id="LAR_T_RAC">Larceny by Bias Race</th>
+      <th class="optional-stat" id="LIQUOR">Liquor</th>
+      <th class="optional-stat" id="MURD">Murder</th>
+      <th class="optional-stat" id="NONFOR">Nonforcible Sex Offense</th>
+      <th class="optional-stat" id="RAPE">Rape</th>
+      <th class="optional-stat" id="ROBBE">Robbery</th>
+      <th class="optional-stat" id="SIM_A">Simple Assault</th>
+      <th class="optional-stat" id="SIM_A_RAC">Simple Assault by Race</th>
+      <th class="optional-stat" id="SIM_A_SEX">Simple Assault by Sexual Orientation</th>
+      <th class="optional-stat" id="STATR">Statutory Rape</th>
+      <th class="optional-stat" id="VANDAL">Vandalism</th>
+      <th class="optional-stat" id="VANDAL_RAC">Vandalism by Bias Race</th>
+      <th class="optional-stat" id="VANDAL_REL">Vandalism by Bias Religion</th>
+      <th class="optional-stat" id="VANDAL_SEX">Vandalism by Bias Sexual Orientation</th>
+      <th class="optional-stat" id="VANDAL_GEN">Vandalism by Bias Gender</th>
+      <th class="optional-stat" id="VANDAL_ETH">Vandalism by Bias Ethnicity</th>
+      <th class="optional-stat" id="VEHIC">Motor Vehicle Theft</th>
+      <th class="optional-stat" id="WEAPON">Weapon</th> -->
+      <th>Confidence Score</th>
+    </tr>
+    {% for confidence_scores in site.data.confidence_scores %}
+    <tr class="table-row">
+      <td>{{ confidence_scores.INSTNM }}</td>
+      <!-- <td class="optional-stat" id="">Pick a crime to see confidence...</td>
+      <td class="optional-stat" id="AGG_A">{{ confidence_scores.AGG_A }}</td>
+      <td class="optional-stat" id="ARSON">{{ confidence_scores.ARSON }}</td>
+      <td class="optional-stat" id="BURGLA">{{ confidence_scores.BURGLA }}</td>
+      <td class="optional-stat" id="BURGLA_RAC">{{ confidence_scores.BURGLA_RAC }}</td>
+      <td class="optional-stat" id="DRUG">{{ confidence_scores.DRUG }}</td>
+      <td class="optional-stat" id="FONDL">{{ confidence_scores.FONDL }}</td>
+      <td class="optional-stat" id="FORCIB">{{ confidence_scores.FORCIB }}</td>
+      <td class="optional-stat" id="INTIM">{{ confidence_scores.INTIM }}</td>
+      <td class="optional-stat" id="INTIM_ETH">{{ confidence_scores.INTIM_ETH }}</td>
+      <td class="optional-stat" id="INTIM_GEN">{{ confidence_scores.INTIM_GEN }}</td>
+      <td class="optional-stat" id="INTIM_RAC">{{ confidence_scores.INTIM_RAC }}</td>
+      <td class="optional-stat" id="INTIM_REL">{{ confidence_scores.INTIM_REL }}</td>
+      <td class="optional-stat" id="INTIM_SEX">{{ confidence_scores.INTIM_SEX }}</td>
+      <td class="optional-stat" id="LAR_T">{{ confidence_scores.LAR_T }}</td>
+      <td class="optional-stat" id="LAR_T_RAC">{{ confidence_scores.LAR_T_RAC }}</td>
+      <td class="optional-stat" id="LIQUOR">{{ confidence_scores.LIQUOR }}</td>
+      <td class="optional-stat" id="MURD">{{ confidence_scores.MURD }}</td>
+      <td class="optional-stat" id="NONFOR">{{ confidence_scores.NONFOR }}</td>
+      <td class="optional-stat" id="RAPE">{{ confidence_scores.RAPE }}</td>
+      <td class="optional-stat" id="ROBBE">{{ confidence_scores.ROBBE }}</td>
+      <td class="optional-stat" id="SIM_A">{{ confidence_scores.SIM_A }}</td>
+      <td class="optional-stat" id="SIM_A_RAC">{{ confidence_scores.SIM_A_RAC }}</td>
+      <td class="optional-stat" id="SIM_A_SEX">{{ confidence_scores.SIM_A_SEX }}</td>
+      <td class="optional-stat" id="STATR">{{ confidence_scores.STATR }}</td>
+      <td class="optional-stat" id="VANDAL">{{ confidence_scores.VANDAL }}</td>
+      <td class="optional-stat" id="VANDAL_RAC">{{ confidence_scores.VANDAL_RAC }}</td>
+      <td class="optional-stat" id="VANDAL_REL">{{ confidence_scores.VANDAL_REL }}</td>
+      <td class="optional-stat" id="VANDAL_SEX">{{ confidence_scores.VANDAL_SEX }}</td>
+      <td class="optional-stat" id="VANDAL_GEN">{{ confidence_scores.VANDAL_GEN }}</td>
+      <td class="optional-stat" id="VANDAL_ETH">{{ confidence_scores.VANDAL_ETH }}</td>
+      <td class="optional-stat" id="VEHIC">{{ confidence_scores.VEHIC }}</td>
+      <td class="optional-stat" id="WEAPON">{{ confidence_scores.WEAPON }}</td> -->
+      <td>{{ confidence_scores.confidence_score }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
