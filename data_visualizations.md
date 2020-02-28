@@ -8,13 +8,14 @@ permalink: /data-visualizations
 
 The following visualizations were generated from the Clery Act starting from 2009 to 2017.
 
+## General Crimes
+
+![General Crimes](/images/General_Crimes.png)
+
 ## Liquor Crimes on Campus
 
 ![Liquor Crimes](/images/Liquor_Crimes.png)
 
 ## Rape Crimes on Campus
 
-![Rape Crimes](/images/Rape_Crimes_Reported.png)
-
-
-{% include rape_stats.html %}
+![Rape Crimes](/images/Rape_Crimes.png)
