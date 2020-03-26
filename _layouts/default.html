@@ -31,7 +31,7 @@
         <li><a href="submission-options" id="sub-submission-options">Interviews / Ghostwriting</a></li>
         <li><a href="the-data" id="sub-data-summary">Data Summary</a></li>
         <li><a href="data-visualizations" id="sub-data-visualizations">Data Visualizations</a></li>
-        <li><a href="institution-console" id="sub-institution-search">Confidence Scores</a></li>
+        <li><a href="institution-console" id="sub-institution-search">Inaccuracy Scores</a></li>
         <li><a href="the-mission" id="sub-the-mission">The Mission</a></li>
         <li><a href="about" id="sub-about">About Us</a></li>
         <li><a href="title-ix-information" id="sub-title-ix-information">Title IX</a></li>
@@ -66,7 +66,8 @@
         var sub_pages = ["sub-our-project", "sub-the-mission",
                          "sub-submission-guidelines", "sub-submission-options",
                          "sub-about", "sub-title-ix-information",
-                         "sub-data-summary", "sub-data-visualizations"];
+                         "sub-data-summary", "sub-data-visualizations",
+                         'sub-institution-search'];
 
         for (c = 0; c < sub_pages.length; c++) {
           if (items.includes(sub_pages[c]) == false) {
@@ -117,19 +118,22 @@
           var styling = at_green + at_text_shadow + at_color;
           setAttributes("the-data", styling);
           setAttributes("sub-data-summary", styling + at_height);
-          generateSubnav(['sub-data-summary', 'sub-data-visualizations', 'sub-institution-search']);
+          generateSubnav(['sub-data-summary', 'sub-data-visualizations',
+            'sub-institution-search']);
           break;
         case "data-visualizations":
           var styling = at_green + at_text_shadow + at_color;
           setAttributes("the-data", styling);
           setAttributes("sub-data-visualizations", styling + at_height);
-          generateSubnav(['sub-data-summary', 'sub-data-visualizations', 'sub-institution-search']);
+          generateSubnav(['sub-data-summary', 'sub-data-visualizations',
+            'sub-institution-search']);
           break;
         case "institution-console":
           var styling = at_green + at_text_shadow + at_color;
           setAttributes("the-data", styling);
           setAttributes("sub-institution-search", styling + at_height);
-          generateSubnav(['sub-data-summary', 'sub-data-visualizations', 'sub-institution-search']);
+          generateSubnav(['sub-data-summary', 'sub-data-visualizations',
+            'sub-institution-search']);
           break;
         /****************************/
         /***** ABOUT NAVIGATION *****/
